@@ -18,6 +18,7 @@ describe('App e2e', () => {
   let prisma: PrismaService;
 
   beforeAll(async () => {
+    jest.setTimeout(10000); //timeout setting increased, since my computer is slow
     const moduleRef =
       await Test.createTestingModule({
         imports: [AppModule],
